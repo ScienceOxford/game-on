@@ -30,12 +30,40 @@
     <p>You should see a screen like the picture below, with the <em>emulator</em> on the left, the <em>menu</em> in the middle, and your <em>code</em> on the right.</p>
     <img src=".\images\1-emulator.PNG" alt="Screenshot of the editor - emulator on the left, the menu in the middle, your code on the right" width="1000px" height="auto">
     <br>
+    <p>You create your program by dragging-and-dropping blocks from the menu onto the coding area, and slotting them together - similar to Scratch.<p>
     <p>For the rest of these instructions, we will walk through creating the pancake collecting game shown above.</p>
     <br>
   </div>
 
   <div id="first-sprite" class="left">
     <h3>Adding a background & your first sprite</h3>
+    <p>Click on the <strong>Scene</strong> menu to find blocks related to the background of your game.</p>
+    <p>Choose the <strong>set background image to []</strong> block, and drag it into your <strong>on start</strong> block.</p>
+    <img src=".\images\2-background.PNG" alt="Screenshot of blocks - on start, set background image" width="600px" height="auto">
+    <br>
+    <p>Click on the grey box in this block to design your background, or choose from the gallery.</p>
+    <br>Click on the <strong>Sprite</strong> menu to find blocks to create and edit sprites - anything that moves, or interacts with other things in your game is a sprite.</p>
+    <p>Choose the <strong>set mySprite to sprite [] of kind Player</strong> block, and drag it into your <strong>on start</strong> block, underneath the background block.</p>
+    <img src=".\images\3-add-sprite.PNG" alt="Screenshot of blocks - on start, set background image, set mySprite to sprite of kind Player" width="600px" height="auto">
+    <br>
+    <p>Click on the grey box in this block to design your sprite, then <strong>rename it</strong> by clicking on the red <strong>mySprite</strong> box - what is your character called?</p>
+    <img src=".\images\4-rename-variable.PNG" alt="Screenshot of blocks - on start, set background image, set mySprite to sprite of kind Player" width="600px" height="auto">
+    <br>
+    <p>You should now see on your emulator your background, and your chosen sprite in the middle of the screen.</p>
+    <p class=debugging><strong>Now is a good time to save your game so you don't lose it!</strong></p>
+    <p>To start the game with your sprite in a different place, open the <strong>Sprite</strong> menu again, and find the <strong>set mySprite position to x 0 y 0</strong> block.</p>
+    <p>Place this block underneath your current code, still inside the <strong>on start</strong> loop.</p>
+    <p>Because we renamed our sprite, change <strong>mySprite</strong> to the name of your sprite (later in the game you will have multiple sprites to choose from!).</p>
+    <p>Your sprite has now moved up to the top left corner of the emulator! This is because the position is set to <strong>x=0, y=0</strong>, which are the coordinates of the top left.</p>
+    <p>Change the position by choosing new coordinates, by clicking on the x or y option on the block - choose the best place for your sprite to start the game!</p>
+    <img src=".\images\5-set-position.PNG" alt="Screenshot of blocks - set mySprite to sprite of kind Player, set mySprite position to x 0 y 0" width="600px" height="auto">
+    <br>
+    <p class=debugging><strong>Remember to save your game!</strong></p>
+    <br>
+  </div>
+
+  <div id="moving" class="left">
+    <h3>Controlling your sprite's movements</h3>
     <p>...</p>
     <p class=debugging><strong>Remember to save your game!</strong></p>
     <br>
