@@ -98,6 +98,7 @@
     <p>Open the <strong>Sprites</strong> menu, and scroll down until you find the <strong>on sprite of kind Player overlaps with otherSprite of kind Player</strong> block, and add it to your main coding window.</p>
     <p>We don't care what happens when a Player overlaps with a Player, because we only have one Player! So change the second option to <strong>Device</strong> (or whatever you classified your machine as).</p>
     <p>Also in the <strong>Sprite menu</strong>, find the <strong>mySprite</strong> start spray effect</strong> block as slot it into the <strong>overlap</strong> block you just created.</p>
+    <br>
     <p><strong>The next step is very important!</strong></p>
     <p>The overlap block works by saying what happens when any <strong>Player</strong> overlaps with any <strong>Device</strong>, so if we name which sprite starts the effect, our code will not work as expected later on in the game, when we have more sprites.</p>
     <p>To make sure that the effect happens to the specific <strong>Device</strong> that the <strong>Player</strong> overlaps (touches), drag the red <strong>otherSprite</strong> oval from the overlap block, and drop it into the effect block, on top of the mySprite option. See the picture below.</p>
@@ -115,14 +116,49 @@
 
   <div id="projectile" class="left">
     <h3>Adding a projectile</h3>
-    <p>...</p>
+    <p>Time to add the pancakes!</p>
+    <p>We want to machine to fling pancakes on a regular basis. Open the <strong>Game</strong> menu and pull out the <strong>on game update every 500ms</strong> loop - you can change the number of miliseconds to make the pancakes appear more or less often.
+    <p>Moving sprites are <strong>projectiles</strong>, and you can find the block you need in the <strong>Sprite</strong> menu - <strong>set projectile to projectile [] from mySprite with vx 50 vy 50</strong>.</p>
+    <img src=".\images\13-add-projectile.PNG" alt="Screenshot of blocks - on game update every 500ms, set projectile to projectile from mySprite with vx 50 vy 50" width="600px" height="auto">
+    <br>
+    <p>There is a lot happening in this block, so lets take things one step at a time.</p>
+    <p>Rename the projectile to <strong>Pancake</strong>, so you know what is being created.</p>
+    <p>Click in the grey box to design your pancake - how big or small you make the picture will determine how easy they are to collect!</p>
+    <p>Change <strong>from mySprite</strong> to <strong>from Machine</strong> - this chooses where the pancakes start.</p>
+    <p>vx and vy are the <strong>velocity - speed in a direction</strong>. vx shows how fast it moves left/right across the screen, and vy show fast up/down. If you keep the numbers equal, it will move diagonally!</p>
+    <p>Before changing the velocity, look at how the pancakes are moving - which direction do they go?</p>
+    <ul>
+      <li>What happens when you make the number bigger or smaller?</li>
+      <li>How do you think you could make it travel the other direction?</li>
+    </ul>
+    <img src=".\images\14-renamed-projectile.PNG" alt="Screenshot of blocks - on game update every 1000ms, set Pancake to projectile from Machine with vx -50 vy -50" width="600px" height="auto">
+    <br>
+    <p class=debugging><strong>Now is a good time to save your game so you don't lose it!</strong></p>
+    <br>
+    <p>It's not much of a game if you know where the projectiles are going to move every time, so let's make it random!</p>
+    <p>Look in the <strong>Math</strong> menu for the <strong>pick random from 0 to 10</strong> block, and drop it into the number slot of vx. What do you need your minimum and maximum to be, based on how the pancakes moved in your experiments?</p>
+    <p>Repeat the above step for vy, and check that everything works.</p>
+    <img src=".\images\15-random-velocity.PNG" alt="Screenshot of blocks - on game update every 1000ms, set Pancake to projectile from Machine with vx pick random -50 to 0 vy pick random -50 to 0" width="1000px" height="auto">
+    <br>
+    <p>Finally, think about what you want your game to be, and decide whether pancakes are <strong>Food</strong>, <strong>Enemy</strong> or something else.</p>
+    <p>Find the <strong>set mySprite kind to Player</strong> block in the <strong>Sprite</strong> menu, and reclassify your pancakes to make it easier to use them in your game later.</p>
+    <img src=".\images\16-code-so-far.PNG" alt="Screenshot of blocks - on game update every 1000ms, set Pancake to projectile from Machine with vx pick random -50 to 0 vy pick random -50 to 0, set Pancake kind to Food" width="1000px" height="auto">
+    <br>
     <p class=debugging><strong>Remember to save your game!</strong></p>
     <br>
   </div>
 
   <div id="scoring" class="left">
     <h3>Adding scoring</h3>
-    <p>...</p>
+    <p>Final step in making a working game, is catching the pancakes and adding up the score.</p>
+    <p>We want another <strong>overlap</strong> block for this - this time checking when the <strong>Player</strong> overlaps with <strong>Food</strong> or <strong>Enemy</strong>, or whatever you classified your pancakes as.</p>
+    <p>Into this loop drop a <strong>destroy mySprite</strong> block from the <strong>Sprites</strong> menu, and remember to update it to destroy <strong>otherSprite</strong>, so that the specific pancake you get to is the one that is destroyed.</p>
+    <img src=".\images\17-overlap-food.PNG" alt="Screenshot of blocks - on sprite of kind Player overlaps otherSprite of kind Food, destroy otherSprite" width="1000px" height="auto">
+    <br>
+    <p>Click the <em>plus button</em> to add an effect that happens when the sprite is destroyed, and for how long.</p>
+    <p>Finally, the score! Look in the <strong>Info</strong> menu for <strong>change score by 1</strong>.</p>
+    <img src=".\images\18-code-so-far.PNG" alt="Screenshot of blocks - on sprite of kind Player overlaps otherSprite of kind Food, destroy otherSprite with smiles effect for 200ms, change score by 1" width="1000px" height="auto">
+    <br>
     <p class=debugging><strong>Remember to save your game!</strong></p>
     <br>
   </div>
