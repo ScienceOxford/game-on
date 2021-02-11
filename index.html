@@ -64,14 +64,51 @@
 
   <div id="moving" class="left">
     <h3>Controlling your sprite's movements</h3>
-    <p>...</p>
+    <p>Click on the <strong>Controller</strong> menu to find blocks related to movement.</p>
+    <p>Choose the <strong>move mySprite with buttons</strong> block, and add it to your code.</p>
+    <p>Remember to choose your sprite's name, so the game knows which one to move!</p>
+    <p>Try controlling your sprite using the joystick on the emulator. You can also control it using either the arrow keys or WASD on your keyboard.</p>
+    <br>
+    <p>You probably noticed that your sprite can disappear off the side of the screen!</p>
+    <p>Look in the <strong>Sprite</strong> menu for the <strong>set mySprite stay in screen</strong> block and add it to your code. Update the name, and turn it on!</p>
+    <img src=".\images\6-move-sprite.PNG" alt="Screenshot of blocks - move mySprite with buttons, set mySprite stay in screen ON" width="600px" height="auto">
+    <br>
     <p class=debugging><strong>Remember to save your game!</strong></p>
     <br>
   </div>
 
   <div id="second-sprite" class="left">
     <h3>Adding a second sprite & interacting with it</h3>
-    <p>...</p>
+    <p>We currently have a cool background, and our scientist character who we can move around the screen. Next, we add her pancake making machine!</p>
+    <p>The same as you did for your first sprite, use the <strong>set mySprite to sprite [] of kind Player</strong> block, to create the pancake machine.</p>
+    <p>Rename it to something else, such as <em>Machine</em>, and design your sprite or choose one from the gallery.</p>
+    <p>The last part of that block says that the sprite is a <strong>Player</strong> - this isn't true for the machine!</p>
+    <p>Click the box to see the list of options, then choose <em>Add a new kind</em> as none of the options fit! For example, say that it is a <strong>Device</strong> or <strong>Object</strong>.</p>
+    <img src=".\images\7-second-sprite.PNG" alt="Screenshot of blocks - set mySprite2 to sprite of kind Player - showing options to change Player to Projectile, Food, Enemy or Add a new kind" width="600px" height="auto">
+    <br>
+    <p>Where do you want the machine to be at the start of your game? Find the <strong>set mySprite position to x 0 y 0</strong>, remembering to choose the correct sprite, and position it in a good location.</p>
+    <img src=".\images\8-position-second-sprite.PNG" alt="Screenshot of blocks - set mySprite2 to sprite of kind Device, set mySprite2 position to x 138 y 101" width="600px" height="auto">
+    <br>
+    <p>Your code so far should look something like the picture below - you have create two sprites and set them up for the start of the game.</p>
+    <img src=".\images\9-steps-so-far.PNG" alt="Screenshot of blocks showing all the code so far, plus the emulator showing the position of the sprites" width="1000px" height="auto">
+    <br>
+    <p class=debugging><strong>Now is a good time to save your game so you don't lose it!</strong></p>
+    <br>
+    <p>We are going to start a new <em>loop</em> now - a block of code that other things can slot inside - to decide what happens when the two sprites <strong>overlap</strong>.</p>
+    <p>Open the <strong>Sprites</strong> menu, and scroll down until you find the <strong>on sprite of kind Player overlaps with otherSprite of kind Player</strong> block, and add it to your main coding window.</p>
+    <p>We don't care what happens when a Player overlaps with a Player, because we only have one Player! So change the second option to <strong>Device</strong> (or whatever you classified your machine as).</p>
+    <p>Also in the <strong>Sprite menu</strong>, find the <strong>mySprite</strong> start spray effect</strong> block as slot it into the <strong>overlap</strong> block you just created.</p>
+    <p><strong>The next step is very important!</strong></p>
+    <p>The overlap block works by saying what happens when any <strong>Player</strong> overlaps with any <strong>Device</strong>, so if we name which sprite starts the effect, our code will not work as expected later on in the game, when we have more sprites.</p>
+    <p>To make sure that the effect happens to the specific <strong>Device</strong> that the <strong>Player</strong> overlaps (touches), drag the red <strong>otherSprite</strong> oval from the overlap block, and drop it into the effect block, on top of the mySprite option. See the picture below.</p>
+    <img src=".\images\10-overlap.PNG" alt="Screenshot of blocks - on sprite of kind Player overlaps otherSprite of kind Device, otherSprite start spray effect" width="600px" height="auto">
+    <br>
+    <p>Make sure that this works by moving your character onto the machine, the machine should start a spray effect!</p>
+    <p>At the moment, the spray effect will not stop... click the <em>plus button</em> on the effect block to set how long the effect continues for.</p>
+    <p>Which effect do you want to use? The code below shows the <em>hearts</em> effect running for <em>500ms</em>.</p>
+    <img src=".\images\11-hearts-for-time.PNG" alt="Screenshot of blocks - on sprite of kind Player overlaps otherSprite of kind Device, otherSprite start hearts effect for 500ms" width="600px" height="auto">
+    <img src=".\images\12-example.gif" alt="Game example - scientist moving onto the machine, then away again. The machine creates hearts when touched." width="600px" height="auto">
+    <br>
     <p class=debugging><strong>Remember to save your game!</strong></p>
     <br>
   </div>
@@ -102,6 +139,7 @@
     <h3>What next?</h3>
     <p>Get creative and add different features to your game - what theme do you want to use?</p>
     <p>The links below will help you with a couple of our ideas!</p>
+    <p class=debugging><strong>Remember to save your game whenever you make changes!</strong></p>
   </div>
 
   <nav class="links bg_green">
