@@ -91,3 +91,8 @@ ul, ol {
   margin-left: 20px;
   margin-bottom: 10px;
 }
+
+table {
+  text-align: center;
+  border-spacing: 15px;
+}
