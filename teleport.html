@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Game On!</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>Make the Machine Teleport</h1>
+  </header>
+
+  <div id="set-up" class="left">
+    <p>You could make the game more difficult by stopping the player from getting too close to the machine.</p>
+    <p class=debugging><strong>This is the most complex of the extension instructions, so consider trying one of the other ideas first.</strong></p>
+    <p>To start with, let's make the player lose a life if they <strong>overlap</strong> the machine!</p>
+    <p>You already have an overlap loop for this, so find this block and add a <strong>change life by -1</strong> block from the <strong>Info</strong> menu to it.</p>
+    <img src=".\images\1-remove-life.PNG" alt="Screenshot of blocks - on sprite of kind Player overlaps with otherSprite of kind Device, otherSprite start hearts effect for 500ms, change life by -1" width="600px" height="auto">
+    <br>
+    <p>Test out this code by moving your player over the machine.</p>
+    <p>Your player loses all three lives, and the game ends! This is because the program runs very quickly, and you cannot move the player away quick enough to lose only one life.</p>
+    <p>To fix this, we can <strong>destroy</strong> the machine sprite, and recreate it somewhere else on the screen.</p>
+    <p>Replace the <strong>otherSprite start effect</strong> block with the <strong>destroy mySprite</strong> block. Remember to change this block so that it effects the <strong>otherSprite</strong>, and use the <em>plus button</em> to add your effect.</p>
+    <p>Next, recreate and position the machine sprite, using the same code you used in your <strong>on start</strong> loop - this time put the machine in a different position.</p>
+    <img src=".\images\2-destroy-replace-sprite.PNG" alt="Screenshot of blocks - on sprite of kind Player overlaps with otherSprite of kind Device, change life by -1, destroy otherSprite with hearts effect for 200ms, set Machine to sprite of kind Device, set Machine to position x 36 y 22" width="600px" height="auto">
+    <br>
+    <p>Test it out to make sure that your machine moves.</p>
+    <br>
+    <p>Instead of choosing a position for the machine to teleport to, you can make it random!</p>
+    <img src=".\images\3-move-to-random.PNG" alt="Screenshot of blocks - set Machine position to x pick random 0 to screen width y 0" width="600px" height="auto">
+    <br>
+    <p>Try it out, then see what happens to your pancakes! You may need to change <em>their velocity</em> to make sure the game works correctly - do this using this part of your code:</p>
+    <img src=".\images\4-code-to-edit-next.PNG" alt="Screenshot of blocks - on game update every 1000ms, set Pancake to projectile from Machine with vx pick random -50 to 0 vy -50 to 0, set Pancake kind to Food" width="1000px" height="auto">
+    <br>
+    <p>Next steps:</p>
+    <ul>
+      <li>Can you stop the machine from disappearing off the screen?</li>
+      <li>Could you add extra devices or obstacles to the game?</li>
+    </ul>
+  </div>
+
+  <nav class="links bg_green">
+    <a href="index.html">Go Back</a>
+  </nav>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/game-on" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+
+</html>

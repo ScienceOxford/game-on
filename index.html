@@ -99,7 +99,7 @@
     <p>We don't care what happens when a Player overlaps with a Player, because we only have one Player! So change the second option to <strong>Device</strong> (or whatever you classified your machine as).</p>
     <p>Also in the <strong>Sprite menu</strong>, find the <strong>mySprite</strong> start spray effect</strong> block as slot it into the <strong>overlap</strong> block you just created.</p>
     <br>
-    <p><strong>The next step is very important!</strong></p>
+    <p class=debugging><strong>The next step is very important!</strong></p>
     <p>The overlap block works by saying what happens when any <strong>Player</strong> overlaps with any <strong>Device</strong>, so if we name which sprite starts the effect, our code will not work as expected later on in the game, when we have more sprites.</p>
     <p>To make sure that the effect happens to the specific <strong>Device</strong> that the <strong>Player</strong> overlaps (touches), drag the red <strong>otherSprite</strong> oval from the overlap block, and drop it into the effect block, on top of the mySprite option. See the picture below.</p>
     <img src=".\images\10-overlap.PNG" alt="Screenshot of blocks - on sprite of kind Player overlaps otherSprite of kind Device, otherSprite start spray effect" width="600px" height="auto">
@@ -180,9 +180,9 @@
 
   <nav class="links bg_green">
     <a href="countdown.html" target="_blank">add a time limit</a>
-    <a href="..." target="_blank">make the machine move</a>
     <a href="multiplayer.html" target"_blank">multiplayer!</a>
     <a href="arrows.html" target"_blank">shoot down the pancakes</a>
+    <a href="teleporting" target="_blank">make the machine teleport</a>
     <a href="https://arcade.makecode.com/" target"_blank">other tutorials</a>
   </nav>
 
