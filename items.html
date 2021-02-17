@@ -11,26 +11,28 @@
 <body>
   <header>
     <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
-    <h1>Shoot Down the Pancakes</h1>
+    <h1>Collecting Items</h1>
   </header>
 
   <div id="set-up" class="left">
-    <p>You can expand the game by getting your player to shoot the pancakes, instead of (or as well as!) collecting them personally.</p>
-    <p>The emulator has two buttons we haven't used yes, <strong>A and B</strong>.</p>
-    <p>Find the <strong>on A button pressed</strong> block from the <strong>Controller</strong> menu, and create a new projectile from the <strong>Sprite</strong> menu.</p>
-    <p>Name your new projectile sprite and design it (I chose arrows!), and tell them to be created <strong>from your player sprite</strong>.</p>
-    <p>Adjust the velocity until you are happy with the direction your new projectiles go.</p>
-    <img src=".\images\1-projectile-on-A.PNG" alt="Screenshot of blocks - on A button pressed, set projectile to projectile from mySprite with vx 50 vy 0" width="600px" height="auto">
+    <p>In this example, we will add an item to the game that your player can collect. A future tutorial page will expand on this so that the item either gives the character another life, or makes them invulnerable for a certain length of time.</p>
+    <p>Step 1 is to create a new sprite for the item - but we don't want it to appear at the start of the game, we want it to be created at a random time and in a random position!</p>
+    <p>To do this, use an <strong>on game update every 500ms</strong> block, and combine this with a <strong>pick random</strong> block from the <strong>Math</strong> menu, to allow your item to be created at random times!</p>
+    <img src=".\images\1-create-item-random-time.PNG" alt="Screenshot of blocks - on game update every pick random 2000 to 5000 ms, set myItem to sprite of kind Item, set myItem position to x pick random 0 to 160 y pick random 0 to 160" width="1000px" height="auto">
     <br>
-    <p>Adjust your <strong>overlap</strong> block, so instead of scoring when your player overlaps with your Food/Enemy/pancakes, you score when your <strong>Projectile</strong> overlaps instead.</p>
-    <img src=".\images\2-score-on-projectile.PNG" alt="Screenshot of blocks - on sprite of kind Projectile overlaps otherSprite of kind Food, destroy otherSprite, change score by 1" width="600px" height="auto">
-    <br>
-    <p>Test it out to make sure it works, then decide what you want to do next...</p>
+    <p>Try out this code and see what happens.</p>
     <ul>
-      <li>Can you make the arrow disappear when it hits a pancake?</li>
-      <li>Can you create a second projectile, maybe one fast and one slow?</li>
-      <li>Could you assign different points for hitting the pancake with a projectile vs with the player?</li>
+      <li>How often does an item get created?</li>
+      <li>Where on the screen is it?</li>
+      <li>Do they ever disappear?</li>
     </ul>
+    <p>The next steps for this project are...</p>
+    <ol>
+      <li>When your character overlaps with the item, destroy it.</li>
+      <li>When your character overlaps with the item, how can you show that they picked it up? Try changing the appearence of the sprite!</li>
+      <li>Do you want more than one item to be created at once, or should the old one get destroyed when a new one is created?</li>
+      <li>What effect do you want the item to have on the character? Addings lives (using the Info menu), or adding invulnerability (you will need an 'if then else' statement!).</li>
+    </ol>
     <br>
   </div>
 
