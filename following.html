@@ -11,26 +11,22 @@
 <body>
   <header>
     <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
-    <h1>Shoot Down the Pancakes</h1>
+    <h1>Make an Enemy Follow your Player</h1>
   </header>
 
   <div id="set-up" class="left">
-    <p>You can expand the game by getting your player to shoot the pancakes, instead of (or as well as!) collecting them personally.</p>
-    <p>The emulator has two buttons we haven't used yes, <strong>A and B</strong>.</p>
-    <p>Find the <strong>on A button pressed</strong> block from the <strong>Controller</strong> menu, and create a new projectile from the <strong>Sprite</strong> menu.</p>
-    <p>Name your new projectile sprite and design it (I chose arrows!), and tell them to be created <strong>from your player sprite</strong>.</p>
-    <p>Adjust the velocity until you are happy with the direction your new projectiles go.</p>
-    <img src=".\images\1-projectile-on-A.PNG" alt="Screenshot of blocks - on A button pressed, set projectile to projectile from mySprite with vx 50 vy 0" width="600px" height="auto">
+    <p>One way to make your game exciting, could be to make an enemy or obstacle follow your player around, so you have to keep moving to stay out of their way!</p>
+    <p>For example, to make the pancake machine follow our player, we need to find its set-up instructions in the <strong>on start</strong> loop, and add a follow block.</p>
+    <p>From the <strong>Sprite</strong> menu, find the <strong>set myEnemy follow myPlayer</strong> block, and add it underneath your sprite set-up code - remember to choose the correct sprites - who should follow who?</p>
+    <img src=".\images\1-follow.PNG" alt="Screenshot of blocks - set Machine position to x 138 y 101, set Machine follow Sarah" width="600px" height="auto">
     <br>
-    <p>Adjust your <strong>overlap</strong> block, so instead of scoring when your player overlaps with your Food/Enemy/pancakes, you score when your <strong>Projectile</strong> overlaps instead.</p>
-    <img src=".\images\2-score-on-projectile.PNG" alt="Screenshot of blocks - on sprite of kind Projectile overlaps otherSprite of kind Food, destroy otherSprite, change score by 1" width="600px" height="auto">
+    <p>Test out your game - the following sprite probably catches up with your player pretty quickly!</p>
+    <p>You can change the speed of your player, or your enemy, or both, by expanding their movement blocks.</p>
+    <p>Click the <em>plus button</em> at the end of the follow block (or at the end of your move player with buttons block) and change the speed.</p>
+    <img src=".\images\2-follow-speed.PNG" alt="Screenshot of blocks - set Machine follow Sarah with speed 100" width="600px" height="auto">
     <br>
-    <p>Test it out to make sure it works, then decide what you want to do next...</p>
-    <ul>
-      <li>Can you make the arrow disappear when it hits a pancake?</li>
-      <li>Can you create a second projectile, maybe one fast and one slow?</li>
-      <li>Could you assign different points for hitting the pancake with a projectile vs with the player?</li>
-    </ul>
+    <p>Make sure to make something happen when your player gets caught by adding or editing your <strong>overlap</strong> blocks!</p>
+    <br>
     <br>
   </div>
 
