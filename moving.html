@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Game On!</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>Make an Enemy Move</h1>
+  </header>
+
+  <div id="set-up" class="left">
+    <p>As well as adding <em>projectiles</em>, you can make your <em>enemy</em> or other sprites move around the game as well.</p>
+    <p>For example, to make the pancake machine move, we need to find its set-up instructions in the <strong>on start</strong> loop, and add a movement block.</p>
+    <p>From the <strong>Sprite</strong> menu, find the <strong>set mySprite velocity to vx 50 vy 50</strong> block, and add it underneath your sprite set-up code - remember to choose the correct sprite!</p>
+    <img src=".\images\1-set-velocity.PNG" alt="Screenshot of blocks - set Machine position to x 138 y 101, set Machine velocity to vx 50 vy 50" width="600px" height="auto">
+    <br>
+    <p>Your sprite will now start moving in a diagonal direction - you can change vx and vy to decided the direction and speed - do you want it to move up and down, across the screen, randomly?</p>
+    <p>To stop your sprite from disappearing off the side of the screen, look in the <strong>Sprite</strong> menu for the <strong>set mySprite bounce on wall</strong> block, and add it to your code - does it do what you expect?</p>
+    <img src=".\images\2-bounce.PNG" alt="Screenshot of blocks - set Machine position to x 138 y 101, set Machine velocity to vx 50 vy 50, set Machine to bounce on wall ON" width="600px" height="auto">
+    <br>
+    <br>
+  </div>
+
+  <nav class="links bg_green">
+    <a href="index.html">Go Back</a>
+  </nav>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/game-on" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+
+</html>
