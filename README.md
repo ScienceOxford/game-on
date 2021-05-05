@@ -1,7 +1,7 @@
 # game-on
-Files for the 1.5h Creative Computing Club, 'Game On'
+Files for the 2h Online Creative Computing Club, 'Game On'
 
-Visit here for the instructions: <https://scienceoxford.github.io/game-on>
+Visit here for the instructions: <https://scienceoxford.github.io/game-on/>
 
 *Developed by [ScienceOxford](https://scienceoxford.com) for educational purposes. Please give credit where applicable.
 <br>We love seeing what you've created, so tag us when you share! [@ScienceOxford](https://twitter.com/scienceoxford)*
