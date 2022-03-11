@@ -1,5 +1,5 @@
 # game-on
-Files for the 2h Online Creative Computing Club, 'Game On'
+Files for the 2h Online Creative Computing Club, 'Game On' & 1.5h Creative Computing Club, 'Grow Your Game'
 
 Visit here for the instructions: <https://scienceoxford.github.io/game-on/>
 
